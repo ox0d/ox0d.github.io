@@ -124,3 +124,20 @@
     
 })(jQuery);
 
+// Geolocation
+// Initialize the map
+function initMap() {
+    var location = { lat: 37.7749, lng: -122.4194 }; // Replace with your specific coordinates
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+    });
+
+    // Add a marker
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Tishk International Universtiy'
+    });
+}
+
