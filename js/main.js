@@ -17,38 +17,38 @@
     
 
     // Function to update the image source based on screen size
-    function updateImageSource() {
-        var logoImage = $('#logoImage'); // Select the image by ID
+    // function updateImageSource() {
+    //     var logoImage = $('#logoImage'); // Select the image by ID
 
-        if (window.matchMedia('(max-width: 991.98px)').matches) {
-            // Change the image source for smaller screens
-            logoImage.attr('src', 'img/icasee_logo_green.webp');
-        } else {
-            // Revert to the original image source for larger screens
-            logoImage.attr('src', 'img/icasee_logo_white.webp');
+    //     if (window.matchMedia('(max-width: 991.98px)').matches) {
+    //         // Change the image source for smaller screens
+    //         logoImage.attr('src', 'img/icasee_logo_green.webp');
+    //     } else {
+    //         // Revert to the original image source for larger screens
+    //         logoImage.attr('src', 'img/icasee_logo_white.webp');
 
-            // Sticky Navbar
-            $(window).scroll(function () {
-                var logoImage = $('#logoImage');
+    //         // Sticky Navbar
+    //         $(window).scroll(function () {
+    //             var logoImage = $('#logoImage');
 
-                if ($(this).scrollTop() > 45) {
-                    $('.navbar').addClass('sticky-top shadow-sm');
-                    logoImage.attr('src', 'img/icasee_logo_green.webp');
-                } else {
-                    $('.navbar').removeClass('sticky-top shadow-sm');
-                    logoImage.attr('src', 'img/icasee_logo_white.webp');
-                }
-            });
-        }
-    }
+    //             if ($(this).scrollTop() > 45) {
+    //                 $('.navbar').addClass('sticky-top shadow-sm');
+    //                 logoImage.attr('src', 'img/icasee_logo_green.webp');
+    //             } else {
+    //                 $('.navbar').removeClass('sticky-top shadow-sm');
+    //                 logoImage.attr('src', 'img/icasee_logo_white.webp');
+    //             }
+    //         });
+    //     }
+    // }
 
     // Call the function on page load and attach it to the resize event
-    $(document).ready(function () {
-        updateImageSource(); // Call on page load
+    // $(document).ready(function () {
+    //     updateImageSource(); // Call on page load
 
-        // Attach the function to the resize event
-        $(window).on('resize', updateImageSource);
-    });
+    //     // Attach the function to the resize event
+    //     $(window).on('resize', updateImageSource);
+    // });
 
     
     
@@ -123,21 +123,4 @@
     });
     
 })(jQuery);
-
-// Geolocation
-// Initialize the map
-function initMap() {
-    var location = { lat: 37.7749, lng: -122.4194 }; // Replace with your specific coordinates
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: location
-    });
-
-    // Add a marker
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: 'Tishk International Universtiy'
-    });
-}
 
