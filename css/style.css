@@ -442,3 +442,10 @@
 .text-justify{
     text-align: justify;
 }
+
+/* Carousel items */
+.carousel-item img {
+    object-fit: cover; /* This will make the images cover the entire container while maintaining their aspect ratio */
+    height: 100%; /* Set a specific height for the images */
+    width: 100%; /* Ensure the images take up the full width of the container */
+  }
