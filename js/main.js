@@ -121,6 +121,27 @@
             }
         }
     });
-    
+
+    // My added functions
+    function handleWindowSize() {
+        var element = document.getElementById('hero_title_english_kurdish_arabic'); // Replace with your element ID
+        var className = 'text-center'; // Replace with your desired class name
+      
+        if (window.innerWidth < 992) {
+          element.classList.add(className);
+          console.log(element);
+        } else {
+          element.classList.remove(className);
+          console.log(element);
+
+        }
+      }
+      
+      // Attach the function to the window resize event
+      window.addEventListener('resize', handleWindowSize);
+      
+      // Call the function initially to set the initial state
+      handleWindowSize();
+
 })(jQuery);
 
